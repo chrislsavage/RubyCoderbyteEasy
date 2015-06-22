@@ -2,16 +2,17 @@ alphabet = "abcdefghijklmnopqrstuvwxyz"
 vowels = "aeiou"
 newstr = ""
 def LetterChanges(str)
-  str.each do |letter|
-      case letter
-    when letter == "z"
-      newstr.push("a")
-    when str.index(letter) == nil
-        newstr.push(letter)
-    when vowels.index(letter) != nil
-      newstr.push(letter.upcase)
+i = 0
+while i < str.length
+    case str[i]
+    when str[i] == "z"
+      newstr+="a"
+    when str.index(str[i]) == nil
+        newstr+= letter
+    when vowels.index(str[i]) != nil
+      newstr+= str[i]
     else
-      newstr.push(alphabet.index(letter) + 1)
+      newstr += alphabet.index(str[i]) + 1
 end
 end
   # code goes here
@@ -21,4 +22,4 @@ end
 
 # keep this function call here
 # to see how to enter arguments in Ruby scroll down
-LetterChanges("z") 
+LetterChanges("ab") 
