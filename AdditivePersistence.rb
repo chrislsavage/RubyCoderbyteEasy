@@ -26,7 +26,7 @@ end
 def AdditivePersistence(num)
 count = 0
 newnum = num
-while newnum > 10
+while newnum >= 10
 newnum = NumSum(newnum)
   count += 1
 end
