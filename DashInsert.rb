@@ -7,19 +7,16 @@ def DashInsert(str)
   str = str.split("")
   odd = "13579"
   i = 0
-  puts str.join("")
+  new = ""
 
  while i < str.length
-    if odd.index(str[i]) >= 0 && odd.index(str[i + 1]) >= 0
-      str.insert(i+1, "-")
-      i+=1
+   new += str[i]
+    if odd.index(str[i])  && str[i+1] && odd.index(str[i + 1])
+      new += "-"
     end
-
+i+= 1
   end
   # code goes here
-  return str.join("")
+ return new
 
 end
-
-# keep this function call here
-DashInsert("5667")
