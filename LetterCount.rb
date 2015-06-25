@@ -11,18 +11,29 @@ def LetterCountI(str)
   i = 0
   j = 0
   repeat = 0
+  count = 0
   gr_word = ""
 
   while i < str.length
     word = str[i].split("").sort
-     puts str[i]
+
     while j < word.length
+      puts word[j]
+      puts word[j + 1]
       if word[j] == word [j+1]
+             puts word[j]
         repeat += 1
-        gr_word = str[i]
+      else
+        repeat = 0
       end
+        if repeat > count
+          count = repeat
+          gr_word = str[i]
+        end
+      repeat = 0
       j += 1
     end
+    j = 0
     i += 1
   end
   if gr_word == ""
