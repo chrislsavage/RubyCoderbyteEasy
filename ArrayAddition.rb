@@ -19,9 +19,7 @@ def ArrayAdditionI(arr)
         sum += arr[i]
             while j < arr.length
                 if  arr[j] != arr[i]
-                    puts sum.to_s + ":"
                     sum += arr[j]
-                    puts sum
                     if sum == max
                     return true
                     end
@@ -34,4 +32,3 @@ def ArrayAdditionI(arr)
     	end
   return false
 end
-   
